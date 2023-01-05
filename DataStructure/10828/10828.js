@@ -1,6 +1,5 @@
 // 걸린 시간 00:30:00
 //스택
-const fs = require('fs');
 const line = require('fs').readFileSync('DataStructure/10828/input.txt','utf8')
 const input = line.trim().split('\n');// 줄바꿈 기준으로 분리해 1줄씩 분리해서 담기
 const testCaseNum  = +input[0]; // 테스트케이스 개수
