@@ -17,15 +17,18 @@ function solution(arr){
 let open = 0;
 let close = 0;
 
-      
-    for(let i =0;i<arr.length;i++){
+let number = arr.length;
+ 
+    for(let i =0;i<number;i++){
 
-        if(arr[i] === '('){
+        if(arr.shift() === '('){
+            
             open++;
         }else{
             close++;
         }
         if(close>open){
+            console.log(open,close);
             return false;
         }
     }

@@ -26,11 +26,9 @@ function solution(arr){
             let temp = oneWord[i];
             oneWord[i] = oneWord[oneWord.length-1-i];
             oneWord[oneWord.length-1-i] = temp;
-            
+    
         }
         result[i] = oneWord.join('');
-       
-
     }
     result = result.join(" ");
     console.log(result);
