@@ -1,37 +1,40 @@
 20
 const input = require('fs').readFileSync('1874/input.txt','utf8').trim().split('\n');
+//console.log(input);
 
 const testCase = +input[0];
 let stack = [];
 let arr = [];
 
 let result = [];
-let pos = 0;
+let pos = 1;
 
 let check = 0;
 
 for(let i = 1 ;i<=testCase;i++){
-
+    input[i] = +input[i]
     if(input[i] >= pos){
-        for(let  j = pos; j <input[i] ;j++){
-            stack.push(j+1);
-            result.push('+');
+        for(let  j = pos; j <=input[i] ;j++){
+            stack.push(j);
+            result.push('+');     
         }
-        arr = stack.pop();
-        result.push('-');
-        pos = input[i];
-    }else if(input[i]< pos){
-        arr = stack.pop();
-        result.push('-');
+        pos = input[i] + 1;
+      
     }
-    if(testCase === pos){
-        pos = 0;
-        check = 1
+
+    if(input[i] === stack.pop()){
+        result.push('-');
+    }else{
+        check =1;
+        break;
     }
+
+    // pos === 5
     
 }
 
-function solution(){
-    // 활용해서 예외처리도 시도해볼 예정
-}
+if(check !==1 ){
 console.log(result.join('\n'));
+}else{
+    console.log('NO');
+}
