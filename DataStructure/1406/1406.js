@@ -1,8 +1,6 @@
 //  splice 사용한 방법 동작 비교 ㄱㄱ
 
-const { default: test } = require('node:test');
-const { basename } = require('path');
-const { off } = require('process');
+
 
 // 구현시간 : 25분
 // 실행시간 : 0.073sec

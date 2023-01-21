@@ -4,6 +4,7 @@ const testCase = +input[0];
 let result = [];
 let i =1;
 let pos = i;
+
 while(testCase >= i){
     
     let arr = input[pos].split(" ");
@@ -13,6 +14,7 @@ while(testCase >= i){
     result.push(nodeNum-1); // 노드 - 1 저장
     pos = pos + edgeNum + 1;
     i++
+    
 }
 
 console.log(result.join('\n'));

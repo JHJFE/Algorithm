@@ -18,6 +18,8 @@
 // }
 // console.log(arr)
 // // 하지만 큐로 풀면 시간 초과
+
+// 연결 리스트로 구ㄴ
 const input = require('fs').readFileSync('DataStructure/2164/input.txt','utf8')
 const N = +input
 
@@ -33,10 +35,9 @@ class Node {
 class LinkedList {
     constructor() {
         let init = new Node('init');
+        
         this.head = init;
         this.tail = init;
-
-        this.curNode = undefined;
         this.dataNum = 0;
     }
 
@@ -99,7 +100,6 @@ class LinkedList {
         this.dataNum += 1;
 
     }
-
 }
 
 let a = new LinkedList();
