@@ -1,6 +1,6 @@
 const inputF = require('fs').readFileSync('/Users/junghojae/Documents/GitHub/Algorithm/DataStructure/1021/input.txt','utf8')
 const input = inputF.trim().split('\n');
-//919
+//40분
 
 const info = input[0].split(' ');
 const find = input[1].split(' ');
